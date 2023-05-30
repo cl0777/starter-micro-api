@@ -1,7 +1,11 @@
+
 const { RTMClient } = require("@slack/rtm-api");
 const { WebClient } = require("@slack/web-api");
 const { Configuration, OpenAIApi } = require("openai");
-
+var http = require('http');
+http.createServer(function (req, res) {
+    console.log(`Just got a request at ${req.url}!`)
+    
 
 // Initialize Slack API client
 const slackClientRTM = new RTMClient(
@@ -81,3 +85,8 @@ async function startBot() {
 }
 
 startBot();
+    res.write('Yo!');
+    res.end();
+}).listen(process.env.PORT || 3000);
+
+
