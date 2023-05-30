@@ -37,7 +37,7 @@ async function sendMessage(channel, text) {
 async function sendChatMessage(message) {
   try {
     const config = new Configuration({
-      apiKey: "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",
+      apiKey: process.env.OPEN_AI_API,
     });
 
     const openai = new OpenAIApi(config);
