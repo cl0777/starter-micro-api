@@ -9,10 +9,10 @@ http.createServer(function (req, res) {
 
 // Initialize Slack API client
 const slackClientRTM = new RTMClient(
-  "xoxb-5159745880645-5207057321461-FGaXApCnkHaHVw0oc9VmfZZM"
+  "xoxb-5159745880645-5207057321461-QsfN6DtVpY9la2Xk4CIfHi5R"
 );
 const slackClientWEB = new WebClient(
-  "xoxb-5159745880645-5207057321461-FGaXApCnkHaHVw0oc9VmfZZM"
+  "xoxb-5159745880645-5207057321461-QsfN6DtVpY9la2Xk4CIfHi5R"
 );
 
 // Function to send a message using the Slack API
