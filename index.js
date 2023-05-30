@@ -7,6 +7,11 @@ http.createServer(function (req, res) {
     console.log(`Just got a request at ${req.url}!`)
     
 
+
+    res.write('Yo!');
+    res.end();
+}).listen(process.env.PORT || 3000);
+
 // Initialize Slack API client
 const slackClientRTM = new RTMClient(
   "xoxb-5159745880645-5207057321461-QsfN6DtVpY9la2Xk4CIfHi5R"
@@ -14,7 +19,7 @@ const slackClientRTM = new RTMClient(
 const slackClientWEB = new WebClient(
   "xoxb-5159745880645-5207057321461-QsfN6DtVpY9la2Xk4CIfHi5R"
 );
-
+console.log("Server Initiated")
 // Function to send a message using the Slack API
 async function sendMessage(channel, text) {
   try {
@@ -85,8 +90,3 @@ async function startBot() {
 }
 
 startBot();
-    res.write('Yo!');
-    res.end();
-}).listen(process.env.PORT || 3000);
-
-
