@@ -12,7 +12,7 @@ http.createServer(function (req, res) {
     res.write('Yo!');
     res.end();
 }).listen(process.env.PORT || 3000);
-
+console.log(process.env.SLACK_BOT_API)
 // Initialize Slack API client
 const slackClientRTM = new RTMClient(
   process.env.SLACK_BOT_API
